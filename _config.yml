@@ -1,0 +1,34 @@
+# Site
+name: Cornbread Kelley
+description: Simple Food and Our Favorite Eats
+meta_description: "Simple Food and Our Favorite Eats"
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+paginate: 10
+baseurl:
+google_analytics: 'UA-46278016-1'
+#disqus: 'demowebsite'
+mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
+
+collections:
+  etc:
+    output: true
+    permalink: :slug/
+
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-archives
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+permalinks: /:category/
+
+
+# Other
+markdown: kramdown
+highlighter: rouge

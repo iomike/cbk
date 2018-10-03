@@ -1,0 +1,18 @@
+<!-- new -->
+{% assign tags_list = site.categories | sort:"tag" %}
+{% if tags_list.first[0] == null %}
+  {% for tag in tags_list %}
+
+
+      <a class="dropdown-item" href="{{ site.baseurl }}/category/{{ tag }}">{{ tag }}</a>
+=
+  {% endfor %}
+{% else %}
+  {% for tag in tags_list %}
+
+    <a class="dropdown-item"  href="{{ site.baseurl }}/category/{{ tag[0] }}">{{ tag[0] | capitalize }}</a>
+
+
+  {% endfor %}
+{% endif %}
+{% assign tags_list = nil %}
